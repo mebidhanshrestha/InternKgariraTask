@@ -1,0 +1,35 @@
+button {
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 6.25rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    cursor: pointer;
+  }
+  
+  .dark {
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s;
+    opacity: 1;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  .light {
+    background-color: #F8F9FA;
+    color: #000;
+  
+    &:hover {
+      background-color: #f8f9fa64;
+    }
+  }

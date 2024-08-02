@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    background-color: #F8F9FA;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+
+img{
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  
+    @media (max-width: 675px) {
+      padding-right: 1.5625rem; /* 25px in rem */
+      padding-left: 1.5625rem;  /* 25px in rem */
+    }
+  
+    @media (min-width: 675px) and (max-width: 1440px) {
+      padding-right: clamp(1.5625rem, 3vw + 1rem, 7.5rem); /* Adjust padding responsively */
+      padding-left: clamp(1.5625rem, 3vw + 1rem, 7.5rem);  /* Adjust padding responsively */
+    }
+  
+    @media (min-width: 1440px) {
+      padding-right: 7.5rem; /* Original padding for screens 1440px and larger */
+      padding-left: 7.5rem;  /* Original padding for screens 1440px and larger */
+    }
+  }
+  

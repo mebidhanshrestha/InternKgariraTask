@@ -1,0 +1,34 @@
+.Artist {
+  .container {
+    .artist-info {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+      width: 100%;
+
+      .line {
+        width: 100%;
+        height: 0.0625rem;
+        background-color: #dbe1e5;
+      }
+
+      .first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+
+        .firstFrame {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2.5rem;
+          align-self: stretch;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
