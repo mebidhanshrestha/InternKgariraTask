@@ -160,8 +160,9 @@
     background-color: #001828;
     display: flex; 
     justify-content: center;
-    align-items: center; 
+    // align-items: center; 
     z-index: 20; 
+    padding: 200px;
 
     .cross {
       position: absolute;
