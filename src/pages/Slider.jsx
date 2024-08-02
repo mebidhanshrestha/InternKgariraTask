@@ -1,6 +1,6 @@
 import "../sass/Slider.scss";
 import Hero from "../components/Hero";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import recent from "../assets/recent.png";
 import "swiper/css";
@@ -12,10 +12,22 @@ function Slider() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  useEffect(() => {
+    // Log to ensure refs are correctly assigned
+    console.log('Prev Ref:', prevRef.current);
+    console.log('Next Ref:', nextRef.current);
+  }, []);
+
   return (
     <section className="Slider">
       <div className="container">
         <Swiper
+          onInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -23,12 +35,6 @@ function Slider() {
           pagination={{ el: '.swiper-pagination', clickable: true }}
           modules={[Navigation, Pagination]}
           className="mySwiper Slider-info"
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
         >
           <SwiperSlide>
             <Hero
